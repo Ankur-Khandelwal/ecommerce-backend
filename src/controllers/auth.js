@@ -49,11 +49,11 @@ exports.signin = (req, res) => {
         })
       }
       else{
-        return res.status(402).json({message: 'INCORRECT PASSWORD'});
+        return res.status(400).json({message: 'INCORRECT PASSWORD'});
       }
     }
     else{
-      return res.status(403).json({message: "USER NOT FOUND"});
+      return res.status(400).json({message: "USER NOT FOUND"});
     }
   })
 }
